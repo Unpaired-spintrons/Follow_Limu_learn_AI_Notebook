@@ -190,3 +190,142 @@ x2 = tor.tensor([[[x11,y11,z11],[x21,y21,z21]],[[x12,y12,z12],[x22,y22,z22]]]) #
 数据预处理其实就是把我们非数值的数据变为数值型数据。这里我们主要使用的是pandas这个库。
 
 具体实操看[实操笔记](带代码的实操笔记极其函数库解\00数据操作和预处理\lib_know_data_preprocessing.ipynb "这是一个实操笔记")
+
+### 注意事项
+
+见[实操笔记](带代码的实操笔记极其函数库解\00数据操作和预处理\lib_know_data_operator_preprocessing_tips.ipynb "这是一个实操笔记")
+
+## 线性代数
+
+线性代数是一个数学的基础，其实这里不会涉及过多的线性代数
+
+### 标量
+
+#### 简单操作
+
+- $c = a + b$
+- $ c =  a * b$
+- $c = \sin\theta$
+
+#### 长度
+
+$$
+|a|= \begin{cases}a&\text{a>0}\\-a&\text{other}\end{cases}
+$$
+
+$$
+|a + b| \leqslant |a| + |b|
+$$
+
+$$
+|a * b| = |a| * |b|
+$$
+
+### 向量
+
+#### 简单操作
+
+- $\vec{c} = \vec{a} + \vec{b} \quad where \quad c_i = a_i + b_i$
+- $\vec{c} = k_{标量} \bullet \vec{b} \quad where \quad c_i = k_{标量} * b_i $
+- $\vec{c} = \sin \vec{a} \quad where \quad c_i = \sin a_i$
+
+#### 长度
+
+$$
+||\vec{a}||_2 = [\sum^{m}_{i = 1}a^2_i]^{\frac{1}{2}}
+$$
+
+$$
+||\vec{a}|| \geqslant 0 \quad for \quad all \quad \vec{a}
+$$
+
+$$
+||\vec{a} + \vec{b}|| \leqslant ||\vec{a}|| + ||\vec{b}||
+$$
+
+$$
+||\vec{a} \bullet \vec{b}|| = |\vec{a}| \bullet ||\vec{b}||
+$$
+
+![1700424429556](image/跟着李沐学AI/1700424429556.png)
+
+- 向量点乘$\vec{a^T} \times \vec{b} = \sum^{n}_{i}a_i*b_i$
+- 正交判定$\vec{a^T} \times \vec{b} = 0$
+
+![1700424783593](image/跟着李沐学AI/1700424783593.png)
+
+### 矩阵
+
+#### 简单操作
+
+- $C = A + B \quad where \quad C_{ij} = A_{ij} + B_{ij}$
+- $C = k_标量 \bullet B \quad where \quad C_{ij} = k_标量 * B_{ij} $
+- $C = \sin A \quad where \quad C_{ij} = \sin A_{ij} $
+
+#### 乘法
+
+$$
+\vec{c} = A \bullet \vec{b} \quad where \quad c_i = \sum_jA_{ij} * b_j
+$$
+
+![1700425614394](image/跟着李沐学AI/1700425614394.png)
+
+$$
+C = A \bullet B \quad where \quad C_{ik} = \sum_jA_{ij} * B_{ik}
+$$
+
+![1700425826124](image/跟着李沐学AI/1700425826124.png)
+
+#### 范数
+
+$$
+\vec{c} = A \bullet \vec{b} \quad hence \quad ||\vec{c} \leqslant ||A|| \bullet ||\vec{b}||
+$$
+
+取决于如何衡量b和c的长度
+
+##### 常见范数
+
+- 矩阵范数：最小满足上述公式的值
+- Frobenius范数
+  $$
+  ||A||_{Frob} = [\sum_{ij}A^2_{ij}]^{\frac{1}{2}}
+  $$
+
+#### 对称与反对称
+
+$$
+A_{ij} = A_{ji} 对称矩阵
+$$
+
+$$
+A_{ij} = - A_{ji}反对称
+$$
+
+#### **正定**！！！！
+
+$$
+||x||^2 = x^T \bullet x \geqslant 0 \quad 推论得出 \quad x^T \bullet A \bullet x \geqslant 0
+$$
+
+#### 特殊矩阵
+
+##### 正交矩阵
+
+- 所有行都相互正交
+- 所有行都有单位长度$U \quad wth \quad \sum_jU_{ij}*U_{kj} = \delta_{ik}$
+- 可以写为$UU^T = 1$
+
+##### 置换矩阵
+
+$$
+P \quad where \quad P_{ij} = 1 \quad if \space and \space only \space if \quad j = \pi(i)
+$$
+
+- 置换矩阵是正交矩阵
+
+#### 特征向量和特征值
+
+![1700427337915](image/跟着李沐学AI/1700427337915.png)
+
+### 线性代数代码实现
