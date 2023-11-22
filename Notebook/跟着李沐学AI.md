@@ -329,3 +329,7 @@ $$
 ![1700427337915](image/跟着李沐学AI/1700427337915.png)
 
 ### 线性代数代码实现
+
+代码实时操作(上课跟着做)见[operator](带代码的实操笔记极其函数库解\01线性代数\opreator_linear_algbra.ipynb "操作实时版本")
+
+库操作解析(总结分析)见[Lib库解](带代码的实操笔记极其函数库解\01线性代数\lib_know_linear_algebra_make_true.ipynb "库解")
