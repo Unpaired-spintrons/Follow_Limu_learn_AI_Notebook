@@ -566,6 +566,16 @@ $$
 
 其实原则还是差异分析罢了。
 
+### 从零实现
+
+这是一个深度学习中举足轻重的方法，这是一个实现，之后所有操作的举足轻重的方法
+
+[从0到1实操笔记](带代码的实操笔记极其函数库解\04Softmax\operator_softmax_021.ipynb)
+
+[简洁实现实操笔记](带代码的实操笔记极其函数库解\04Softmax\operator_softmax_easy.ipynb)
+
+[softmax小贴士](带代码的实操笔记极其函数库解\04Softmax\softmax_tips.ipynb)
+
 ## 损失函数
 
 损失函数其实对于机器学习而言时一个很重要的参数或者是配置点，其实就是我们有不少的论文就是通过修改损失函数以获得不同的效果，然后得以发表。
@@ -602,7 +612,10 @@ $$
 Loss(y,y') = \begin{cases} |y - y'|\quad if\quad |y - y'| > 1\\ \frac{1}{2}(y - y')^2\quad others \end{cases}
 $$
 
-
 ![1701849585021](image/跟着李沐学AI/1701849585021.png)
 
 ## 图片分类数据集(很重要，很多都搞，所以单独抽出来讲)
+
+详情请见[实操笔记](带代码的实操笔记极其函数库解\04_1图像分类数据集\operator_image_Fashion-MNIST.ipynb)
+
+当中我们使用了许多有关Fashion-MINIST的操作，现在是对于相关部分的整理，但这个篇章主要还是在实操这个是想抢请看[Fashion-MINIST函数抽象](带代码的实操笔记极其函数库解\04_1图像分类数据集\lib_know_image_Fashion-MINIST.ipynb)
